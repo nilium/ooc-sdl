@@ -668,13 +668,10 @@ WMcursor: cover
 
 SDLQuitEvent: cover from StructSDLQuitEvent
 
-__PidT: cover from Int
 
 UintLeast32T: cover from UInt
 
-__DevT: cover from __u_quad_t
 
-__Blkcnt64T: cover from __quad_t
 
 SDLOverlay: cover from StructSDLOverlay
 
@@ -682,9 +679,7 @@ SDLMouseMotionEvent: cover from StructSDLMouseMotionEvent
 
 FsblkcntT: cover from __fsblkcnt_t
 
-__PthreadSlistT: cover from Struct__PthreadInternalSlist
 
-__Uint32T: cover from UInt
 
 IntFast8T: cover from Char
 
@@ -700,19 +695,15 @@ SDLActiveEvent: cover from StructSDLActiveEvent
 
 BlkcntT: cover from __blkcnt_t
 
-__DaddrT: cover from Int
 
 IntFast16T: cover from Int
 
 IdT: cover from __IdT
 
-__SsizeT: cover from Int
 
-__BlkcntT: cover from Long
 
 SDLExposeEvent: cover from StructSDLExposeEvent
 
-__UInt_: cover from UInt
 
 SDLTimerCallback: cover from Func
 
@@ -730,13 +721,10 @@ SDLCdtrack: cover from StructSDLCdtrack
 
 SDLPalette: cover from StructSDLPalette
 
-__ComparDFnT: cover from Func
 
-__TimeT: cover from Long
 
 SDLCd: cover from StructSDLCd
 
-__OffT: cover from Long
 
 SusecondsT: cover from __SusecondsT
 
@@ -746,47 +734,35 @@ IntLeast16T: cover from Short
 
 LocaleT: cover from __locale_t
 
-__Fsblkcnt64T: cover from __u_quad_t
 
 UintptrT: cover from UInt
 
 SsizeT: cover from __SsizeT
 
-__Int64T: cover from LLong
 
-__FsblkcntT: cover from ULong
 
-__ClockidT: cover from Int
 
 IntptrT: cover from Int
 
-__Fsfilcnt64T: cover from __u_quad_t
 
 SDLMouseButtonEvent: cover from StructSDLMouseButtonEvent
 
-__GnucVaList: cover from Char*
 
 DaddrT: cover from __DaddrT
 
 SDLSysWMEvent: cover from StructSDLSysWMEvent
 
-__ComparFnT: cover from Func
 
-__IoSeekFn: cover from Func
 
 SDLAudioSpec: cover from StructSDLAudioSpec
 
-__GidT: cover from UInt
 
-__Uint8T: cover from UChar
 
 SDLResizeEvent: cover from StructSDLResizeEvent
 
 UintmaxT: cover from ULLong
 
-__LocaleT: cover from Struct__LocaleStruct_*
 
-__KeyT: cover from Int
 
 SDLSem: cover
 
@@ -804,7 +780,6 @@ UInt16T: cover from UShort
 
 ModeT: cover from __ModeT
 
-__FdMask: cover from Long
 
 UintFast8T: cover from UChar
 
@@ -824,9 +799,7 @@ IntLeast64T: cover from LLong
 
 PthreadKeyT: cover from UInt
 
-__TimerT: cover from Void*
 
-_GUint32T: cover from UInt
 
 SDLCursor: cover from StructSDLCursor
 
@@ -846,17 +819,12 @@ SDLKeyboardEvent: cover from StructSDLKeyboardEvent
 
 SDLSysWMmsg: cover
 
-__IoReadFn: cover from Func
 
-__ClockT: cover from Long
 
-__Int32T: cover from Int
 
-__IoWriteFn: cover from Func
 
 SDLVideoInfo: cover from StructSDLVideoInfo
 
-__CaddrT: cover from Char*
 
 StructSDLCond: cover
 
@@ -874,37 +842,13 @@ Struct_SdlTimerID: cover
 
 StructSDLSysWMmsg: cover
 
-rindex: extern func (__S: Char*, __C: Int) -> Char*
-__BuiltinNans: extern(__builtin_nans) func (str: const Char*) -> Double
-__BuiltinAcosf: extern(__builtin_acosf) func (arg0: Float) -> Float
-__BuiltinAcosl: extern(__builtin_acosl) func (arg0: LDouble) -> LDouble
 sdlLinkedVersion_: extern(SDL_Linked_Version) func -> const SDLVersion_*
-__BuiltinVaArgPack: extern(__builtin_va_arg_pack) func (...) -> Bool
-tmpfile: extern func -> FILE*
-drand48: extern func -> Double
 sdlGetAppState: extern(SDL_GetAppState) func -> UInt8
-vprintf: extern func (__Fmt: const Char*, __Arg: __GnucVaList) -> Int
-remove: extern func (__Filename: const Char*) -> Int
-wctomb: extern func (__S: Char*, __Wchar: WChar) -> Int
 sdlSwap16: extern(SDL_Swap16) func (x: UInt16) -> UInt16
-__BuiltinLog10: extern(__builtin_log10) func (arg0: Double) -> Double
-__BuiltinPopcountll: extern(__builtin_popcountll) func (arg0: LLong) -> Int
-strtoldL: extern(strtold_l) func (__Nptr: const Char*, __Endptr: Char**, __Loc: __LocaleT) -> LDouble
-__BuiltinClogf: extern(__builtin_clogf) func (arg0: Float) -> Float
-__BuiltinClogl: extern(__builtin_clogl) func (arg0: LDouble) -> LDouble
 sdlDelay: extern(SDL_Delay) func (ms: UInt32)
-iconv: extern func (__Cd: IconvT, __Inbuf: Char**, __Inbytesleft: SizeT*, __Outbuf: Char**, __Outbytesleft: SizeT*) -> SizeT
-__BuiltinCexpf: extern(__builtin_cexpf) func (arg0: Float) -> Float
-realpath: extern func (__Name: const Char*, __Resolved: Char*) -> Char*
-__BuiltinCexpl: extern(__builtin_cexpl) func (arg0: LDouble) -> LDouble
 sdlSwap32: extern(SDL_Swap32) func (x: UInt32) -> UInt32
-bzero: extern func (__S: Void*, __N: SizeT)
-popen: extern func (__Command: const Char*, __Modes: const Char*) -> FILE*
-fgetcUnlocked: extern(fgetc_unlocked) func (__Fp: FILE*) -> Int
-renameat: extern func (__Oldfd: Int, __Old: const Char*, __Newfd: Int, __New_: const Char*) -> Int
 sdlSwap64: extern(SDL_Swap64) func (x: UInt64) -> UInt64
 sdlStrupr: extern(SDL_strupr) func (string: Char*) -> Char*
-__BuiltinIsless: extern(__builtin_isless) func (...) -> Bool
 sdlCreateRGBSurface: extern(SDL_CreateRGBSurface) func (flags: UInt32, width: Int, height: Int, depth: Int, rmask: UInt32, gmask: UInt32, bmask: UInt32, amask: UInt32) -> SDLSurface*
 sdlAllocRW: extern(SDL_AllocRW) func -> SDLRwops*
 sdlGetMouseState: extern(SDL_GetMouseState) func (x: Int*, y: Int*) -> UInt8
@@ -912,420 +856,114 @@ sdlSemWait: extern(SDL_SemWait) func (sem: SDLSem*) -> Int
 sdlConvertAudio: extern(SDL_ConvertAudio) func (cvt: SDLAudioCVT*) -> Int
 sdlJoystickClose: extern(SDL_JoystickClose) func (joystick: SDLJoystick*)
 sdlGlGetProcAddress: extern(SDL_GL_GetProcAddress) func (proc: const Char*) -> Void*
-vsnprintf: extern func (__S: Char*, __Maxlen: SizeT, __Format: const Char*, __Arg: __GnucVaList) -> Int
-__BuiltinIsnormal: extern(__builtin_isnormal) func (...) -> Bool
-iscntrl: extern func (arg0: Int) -> Int
-__BuiltinAsinf: extern(__builtin_asinf) func (arg0: Float) -> Float
-__BuiltinAsinl: extern(__builtin_asinl) func (arg0: LDouble) -> LDouble
-__BuiltinPopcount: extern(__builtin_popcount) func (arg0: Int) -> Int
 sdlGetTicks: extern(SDL_GetTicks) func -> UInt32
-obstackVprintf: extern(obstack_vprintf) func (__Obstack: Pointer, __Format: const Char*, __Args: __GnucVaList) -> Int
-fflush: extern func (__Stream: FILE*) -> Int
 sdlPumpEvents: extern(SDL_PumpEvents) func
-realloc: extern func (__Ptr: Void*, __Size: SizeT) -> Void*
 sdlGlGetAttribute: extern(SDL_GL_GetAttribute) func (attr: Int, value: Int*) -> Int
-_IoFlockfile: extern(_IO_flockfile) func (arg0: Struct_IoFile*)
 sdlIconv: extern(SDL_iconv) func (cd: IconvT, inbuf: const Char**, inbytesleft: SizeT*, outbuf: Char**, outbytesleft: SizeT*) -> SizeT
-__BuiltinNansf: extern(__builtin_nansf) func (str: const Char*) -> Float
-ffsl: extern func (__L: Long) -> Int
-__BuiltinNansl: extern(__builtin_nansl) func (str: const Char*) -> LDouble
-putcUnlocked: extern(putc_unlocked) func (__C: Int, __Stream: FILE*) -> Int
-__BuiltinFloorf: extern(__builtin_floorf) func (arg0: Float) -> Float
-asprintf: extern func (__Ptr: Char**, __Fmt: const Char*, ...) -> Int
-__BuiltinFloorl: extern(__builtin_floorl) func (arg0: LDouble) -> LDouble
 sdlGetKeyName: extern(SDL_GetKeyName) func (key: Int) -> Char*
-__BuiltinCtanf: extern(__builtin_ctanf) func (arg0: Float) -> Float
-__BuiltinCtanh: extern(__builtin_ctanh) func (arg0: Double) -> Double
-__BuiltinCtanl: extern(__builtin_ctanl) func (arg0: LDouble) -> LDouble
 sdlSetVideoMode: extern(SDL_SetVideoMode) func (width: Int, height: Int, bpp: Int, flags: UInt32) -> SDLSurface*
-mkstemp: extern func (__Template: Char*) -> Int
-strcasecmp: extern func (__S1: const Char*, __S2: const Char*) -> Int
-iscntrlL: extern(iscntrl_l) func (arg0: Int, arg1: __LocaleT) -> Int
-__StrtoullInternal: extern(__strtoull_internal) func (__Nptr: const Char*, __Endptr: Char**, __Base: Int, __Group: Int) -> ULLong
-__BuiltinCarg: extern(__builtin_carg) func (arg0: Double) -> Double
 sdlGetVideoInfo: extern(SDL_GetVideoInfo) func -> const SDLVideoInfo*
-strtoq: extern func (__Nptr: const Char*, __Endptr: Char**, __Base: Int) -> LLong
-__BuiltinClog: extern(__builtin_clog) func (arg0: Double) -> Double
 sdlDestroySemaphore: extern(SDL_DestroySemaphore) func (sem: SDLSem*)
-__BuiltinLogf: extern(__builtin_logf) func (arg0: Float) -> Float
-__BuiltinLogl: extern(__builtin_logl) func (arg0: LDouble) -> LDouble
-__BuiltinFabs: extern(__builtin_fabs) func (arg0: Double) -> Double
-__BuiltinExpf: extern(__builtin_expf) func (arg0: Float) -> Float
-__BuiltinExpl: extern(__builtin_expl) func (arg0: LDouble) -> LDouble
-mblen: extern func (__S: const Char*, __N: SizeT) -> Int
-atof: extern func (__Nptr: const Char*) -> Double
-atoi: extern func (__Nptr: const Char*) -> Int
-vsscanf: extern func (__S: const Char*, __Format: const Char*, __Arg: __GnucVaList) -> Int
 sdlStrrev: extern(SDL_strrev) func (string: Char*) -> Char*
-__Getdelim: extern(__getdelim) func (__Lineptr: Char**, __N: SizeT*, __Delimiter: Int, __Stream: FILE*) -> __SsizeT
-__BuiltinIsunordered: extern(__builtin_isunordered) func (...) -> Bool
-grantpt: extern func (__Fd: Int) -> Int
-__BuiltinCsqrt: extern(__builtin_csqrt) func (arg0: Double) -> Double
-setlinebuf: extern func (__Stream: FILE*)
-__BuiltinSin: extern(__builtin_sin) func (arg0: Double) -> Double
-__CtypeTolowerLoc: extern(__ctype_tolower_loc) func -> const __Int32T**
-__BuiltinLdexpf: extern(__builtin_ldexpf) func (arg0: Float, arg1: Int) -> Float
-__BuiltinLdexpl: extern(__builtin_ldexpl) func (arg0: LDouble, arg1: Int) -> LDouble
-atQuickExit: extern(at_quick_exit) func (__Func_: Func) -> Int
-__Underflow: extern(__underflow) func (arg0: Struct_IoFile*) -> Int
-__BuiltinIslessequal: extern(__builtin_islessequal) func (...) -> Bool
-fcloseall: extern func -> Int
-strtoumax: extern func (nptr: const Char*, endptr: Char**, base: Int) -> UintmaxT
-llabs: extern func (__X: LLong) -> LLong
-setvbuf: extern func (__Stream: FILE*, __Buf: Char*, __Modes: Int, __N: SizeT) -> Int
-bcopy: extern func (__Src: const Void*, __Dest: Void*, __N: SizeT)
-fopen64: extern func (__Filename: const Char*, __Modes: const Char*) -> FILE*
-sprintf: extern func (__S: Char*, __Format: const Char*, ...) -> Int
-_Exit: extern func (__Status: Int)
-__BuiltinTanf: extern(__builtin_tanf) func (arg0: Float) -> Float
-__BuiltinTanh: extern(__builtin_tanh) func (arg0: Double) -> Double
-__BuiltinTanl: extern(__builtin_tanl) func (arg0: LDouble) -> LDouble
-strtod: extern func (__Nptr: const Char*, __Endptr: Char**) -> Double
-strtof: extern func (__Nptr: const Char*, __Endptr: Char**) -> Float
-strtol: extern func (__Nptr: const Char*, __Endptr: Char**, __Base: Int) -> Long
-fmemopen: extern func (__S: Void*, __Len: SizeT, __Modes: const Char*) -> FILE*
-putchar: extern func (__C: Int) -> Int
-wcstombs: extern func (__S: Char*, __Pwcs: const WChar*, __N: SizeT) -> SizeT
-__BuiltinCeil: extern(__builtin_ceil) func (arg0: Double) -> Double
-__BuiltinFmodf: extern(__builtin_fmodf) func (arg0: Float, arg1: Float) -> Float
-__BuiltinFmodl: extern(__builtin_fmodl) func (arg0: LDouble, arg1: LDouble) -> LDouble
-getc: extern func (__Stream: FILE*) -> Int
-gets: extern func (__S: Char*) -> Char*
-getw: extern func (__Stream: FILE*) -> Int
-funlockfile: extern func (__Stream: FILE*)
 sdlGetThreadID: extern(SDL_GetThreadID) func (thread: SDLThread*) -> UInt32
-jrand48: extern func (__Xsubi: UShort*) -> Long
-printf: extern func (__Format: const Char*, ...) -> Int
 sdlJoystickNumBalls: extern(SDL_JoystickNumBalls) func (joystick: SDLJoystick*) -> Int
-__Asprintf: extern(__asprintf) func (__Ptr: Char**, __Fmt: const Char*, ...) -> Int
 sdlLoadObject: extern(SDL_LoadObject) func (sofile: const Char*) -> Void*
 sdlVideoDriverName: extern(SDL_VideoDriverName) func (namebuf: Char*, maxlen: Int) -> Char*
-qsort: extern func (__Base: Void*, __Nmemb: SizeT, __Size: SizeT, __Compar: __ComparFnT)
-__BuiltinReturn_: extern(__builtin_return) func (result: Void*)
 sdlFreeYUVOverlay: extern(SDL_FreeYUVOverlay) func (overlay: SDLOverlay*)
-clearenv: extern func -> Int
-tmpfile64: extern func -> FILE*
-mkdtemp: extern func (__Template: Char*) -> Char*
-strtofL: extern(strtof_l) func (__Nptr: const Char*, __Endptr: Char**, __Loc: __LocaleT) -> Float
-fseek: extern func (__Stream: FILE*, __Off: Long, __Whence: Int) -> Int
-ptsname: extern func (__Fd: Int) -> Char*
 sdlMutexV: extern(SDL_mutexV) func (mutex: SDLMutex*) -> Int
 sdlHasSSE: extern(SDL_HasSSE) func -> Int
-__BuiltinSqrt: extern(__builtin_sqrt) func (arg0: Double) -> Double
-__BuiltinCpow: extern(__builtin_cpow) func (arg0: Double, arg1: Double) -> Double
-getchar: extern func -> Int
-mrand48R: extern(mrand48_r) func (__Buffer: StructDrand48Data*, __Result: Long*) -> Int
-memchr: extern func (__S: Void*, __C: Int, __N: SizeT) -> Void*
-fseeko: extern func (__Stream: FILE*, __Off: __OffT, __Whence: Int) -> Int
-isblank: extern func (arg0: Int) -> Int
-clearerr: extern func (__Stream: FILE*)
-qecvt: extern func (__Value: LDouble, __Ndigit: Int, __Decpt: Int*, __Sign: Int*) -> Char*
-__BuiltinCoshf: extern(__builtin_coshf) func (arg0: Float) -> Float
-__BuiltinCoshl: extern(__builtin_coshl) func (arg0: LDouble) -> LDouble
-fwriteUnlocked: extern(fwrite_unlocked) func (__Ptr: const Void*, __Size: SizeT, __N: SizeT, __Stream: FILE*) -> SizeT
-getcharUnlocked: extern(getchar_unlocked) func -> Int
 sdlLtoa: extern(SDL_ltoa) func (value: Long, string: Char*, radix: Int) -> Char*
-__CtypeToupperLoc: extern(__ctype_toupper_loc) func -> const __Int32T**
 sdlLowerBlit: extern(SDL_LowerBlit) func (src: SDLSurface*, srcrect: SDLRect*, dst: SDLSurface*, dstrect: SDLRect*) -> Int
-__BuiltinCexp: extern(__builtin_cexp) func (arg0: Double) -> Double
 sdlCreateYUVOverlay: extern(SDL_CreateYUVOverlay) func (width: Int, height: Int, format: UInt32, display: SDLSurface*) -> SDLOverlay*
-memmove: extern func (__Dest: Void*, __Src: const Void*, __N: SizeT) -> Void*
-gnuDevMinor: extern(gnu_dev_minor) func (__Dev: ULLong) -> UInt
-__BuiltinAtan2: extern(__builtin_atan2) func (arg0: Double, arg1: Double) -> Double
-__BuiltinMemchr: extern(__builtin_memchr) func (arg0: const Void*, arg1: Int, arg2: UInt) -> Void*
 sdlVideoInit: extern(SDL_VideoInit) func (driverName: const Char*, flags: UInt32) -> Int
-__BuiltinAtanf: extern(__builtin_atanf) func (arg0: Float) -> Float
-__BuiltinAtanl: extern(__builtin_atanl) func (arg0: LDouble) -> LDouble
 sdlOpenAudio: extern(SDL_OpenAudio) func (desired: SDLAudioSpec*, obtained: SDLAudioSpec*) -> Int
-memcpy: extern func (__Dest: Void*, __Src: const Void*, __N: SizeT) -> Void*
 sdlReadLE32: extern(SDL_ReadLE32) func (src: SDLRwops*) -> UInt32
-strncat: extern func (__Dest: Char*, __Src: const Char*, __N: SizeT) -> Char*
-__BuiltinCtan: extern(__builtin_ctan) func (arg0: Double) -> Double
-__BuiltinLog: extern(__builtin_log) func (arg0: Double) -> Double
-bsearch: extern func (__Key: const Void*, __Base: const Void*, __Nmemb: SizeT, __Size: SizeT, __Compar: __ComparFnT) -> Void*
-vsprintf: extern func (__S: Char*, __Format: const Char*, __Arg: __GnucVaList) -> Int
 sdlCreateCursor: extern(SDL_CreateCursor) func (data: UInt8*, mask: UInt8*, w: Int, h: Int, hotX: Int, hotY: Int) -> SDLCursor*
-vasprintf: extern func (__Ptr: Char**, __F: const Char*, __Arg: __GnucVaList) -> Int
-isblankL: extern(isblank_l) func (arg0: Int, arg1: __LocaleT) -> Int
-mbstowcs: extern func (__Pwcs: WChar*, __S: const Char*, __N: SizeT) -> SizeT
 sdlCdplay: extern(SDL_CDPlay) func (cdrom: SDLCd*, start: Int, length: Int) -> Int
-erand48R: extern(erand48_r) func (__Xsubi: UShort*, __Buffer: StructDrand48Data*, __Result: Double*) -> Int
 sdlCondWait: extern(SDL_CondWait) func (cond: SDLCond*, mut: SDLMutex*) -> Int
 sdlVideoModeOK: extern(SDL_VideoModeOK) func (width: Int, height: Int, bpp: Int, flags: UInt32) -> Int
-srandomR: extern(srandom_r) func (__Seed: UInt, __Buf: StructRandomData*) -> Int
 sdlMixAudio: extern(SDL_MixAudio) func (dst: UInt8*, src: const UInt8*, len: UInt32, volume: Int)
-strcasecmpL: extern(strcasecmp_l) func (__S1: const Char*, __S2: const Char*, __Loc: __LocaleT) -> Int
 sdlJoystickGetButton: extern(SDL_JoystickGetButton) func (joystick: SDLJoystick*, button: Int) -> UInt8
 sdlReadLE64: extern(SDL_ReadLE64) func (src: SDLRwops*) -> UInt64
 sdlUnlockAudio: extern(SDL_UnlockAudio) func
 sdlJoystickIndex: extern(SDL_JoystickIndex) func (joystick: SDLJoystick*) -> Int
-__Stpcpy: extern(__stpcpy) func (__Dest: Char*, __Src: const Char*) -> Char*
 sdlGetKeyRepeat: extern(SDL_GetKeyRepeat) func (delay: Int*, interval: Int*)
 sdlUnlockSurface: extern(SDL_UnlockSurface) func (surface: SDLSurface*)
 sdlShowCursor: extern(SDL_ShowCursor) func (toggle: Int) -> Int
-fcvt: extern func (__Value: Double, __Ndigit: Int, __Decpt: Int*, __Sign: Int*) -> Char*
-qfcvt: extern func (__Value: LDouble, __Ndigit: Int, __Decpt: Int*, __Sign: Int*) -> Char*
-mbtowc: extern func (__Pwc: WChar*, __S: const Char*, __N: SizeT) -> Int
-gnuDevMajor: extern(gnu_dev_major) func (__Dev: ULLong) -> UInt
 sdlRwfromFP: extern(SDL_RWFromFP) func (fp: FILE*, autoclose: Int) -> SDLRwops*
-__BuiltinIsfinite: extern(__builtin_isfinite) func (...) -> Bool
-getpt: extern func -> Int
-mkstemps64: extern func (__Template: Char*, __Suffixlen: Int) -> Int
-__BuiltinAsin: extern(__builtin_asin) func (arg0: Double) -> Double
-abort: extern func
-strncmp: extern func (__S1: const Char*, __S2: const Char*, __N: SizeT) -> Int
 sdlMapRGB: extern(SDL_MapRGB) func (format: const const SDLPixelFormat*, r: const UInt8, g: const UInt8, b: const UInt8) -> UInt32
 sdlCondSignal: extern(SDL_CondSignal) func (cond: SDLCond*) -> Int
-__BuiltinFrexp: extern(__builtin_frexp) func (arg0: Double, arg1: Int*) -> Double
-random: extern func -> Long
-lcong48: extern func (__Param: UShort*)
-fdopen: extern func (__Fd: Int, __Modes: const Char*) -> FILE*
 sdlJoystickGetBall: extern(SDL_JoystickGetBall) func (joystick: SDLJoystick*, ball: Int, dx: Int*, dy: Int*) -> Int
-freopen64: extern func (__Filename: const Char*, __Modes: const Char*, __Stream: FILE*) -> FILE*
 sdlHas3DNow: extern(SDL_Has3DNow) func -> Int
-strchrnul: extern func (__S: Char*, __C: Int) -> Char*
-__BuiltinIsgreaterequal: extern(__builtin_isgreaterequal) func (...) -> Bool
-strncpy: extern func (__Dest: Char*, __Src: const Char*, __N: SizeT) -> Char*
 sdlAudioQuit: extern(SDL_AudioQuit) func
-__CtypeGetMbCurMax: extern(__ctype_get_mb_cur_max) func -> SizeT
-isascii: extern func (__C: Int) -> Int
-toascii: extern func (__C: Int) -> Int
-ftrylockfile: extern func (__Stream: FILE*) -> Int
 sdlWmToggleFullScreen: extern(SDL_WM_ToggleFullScreen) func (surface: SDLSurface*) -> Int
-free: extern func (__Ptr: Void*)
 sdlBuildAudioCVT: extern(SDL_BuildAudioCVT) func (cvt: SDLAudioCVT*, srcFormat: UInt16, srcChannels: UInt8, srcRate: Int, dstFormat: UInt16, dstChannels: UInt8, dstRate: Int) -> Int
 sdlSetError: extern(SDL_SetError) func (fmt: const Char*, ...)
 sdlCreateMutex: extern(SDL_CreateMutex) func -> SDLMutex*
-filenoUnlocked: extern(fileno_unlocked) func (__Stream: FILE*) -> Int
 sdlVideoQuit: extern(SDL_VideoQuit) func
-isupper: extern func (arg0: Int) -> Int
-toupper: extern func (__C: Int) -> Int
 sdlGlSwapBuffers: extern(SDL_GL_SwapBuffers) func
-initstateR: extern(initstate_r) func (__Seed: UInt, __Statebuf: Char*, __Statelen: SizeT, __Buf: StructRandomData*) -> Int
-fgetpos: extern func (__Stream: FILE*, __Pos: FposT*) -> Int
-__BuiltinLog10f: extern(__builtin_log10f) func (arg0: Float) -> Float
-__BuiltinLog10l: extern(__builtin_log10l) func (arg0: LDouble) -> LDouble
-cfree: extern func (__Ptr: Void*)
-strfry: extern func (__String: Char*) -> Char*
 sdlEnableUNICODE: extern(SDL_EnableUNICODE) func (enable: Int) -> Int
-snprintf: extern func (__S: Char*, __Maxlen: SizeT, __Format: const Char*, ...) -> Int
-__BuiltinCtzl: extern(__builtin_ctzl) func (arg0: Long) -> Int
-isspace: extern func (arg0: Int) -> Int
-memccpy: extern func (__Dest: Void*, __Src: const Void*, __C: Int, __N: SizeT) -> Void*
 sdlSaveBMPRw: extern(SDL_SaveBMP_RW) func (surface: SDLSurface*, dst: SDLRwops*, freedst: Int) -> Int
-putcharUnlocked: extern(putchar_unlocked) func (__C: Int) -> Int
-tmpnam: extern func (__S: Char*) -> Char*
-cuserid: extern func (__S: Char*) -> Char*
-strtoull: extern func (__Nptr: const Char*, __Endptr: Char**, __Base: Int) -> ULLong
-__BuiltinPowif: extern(__builtin_powif) func (arg0: Float, arg1: Int) -> Float
-__BuiltinPowil: extern(__builtin_powil) func (arg0: LDouble, arg1: Int) -> LDouble
 sdlDestroyCond: extern(SDL_DestroyCond) func (cond: SDLCond*)
-__BuiltinModff: extern(__builtin_modff) func (arg0: Float, arg1: Float*) -> Float
-__BuiltinExp: extern(__builtin_exp) func (arg0: Double) -> Double
-__BuiltinModfl: extern(__builtin_modfl) func (arg0: LDouble, arg1: LDouble*) -> LDouble
-isxdigitL: extern(isxdigit_l) func (arg0: Int, arg1: __LocaleT) -> Int
 sdlHasMMX: extern(SDL_HasMMX) func -> Int
 sdlWriteLE16: extern(SDL_WriteLE16) func (dst: SDLRwops*, value: UInt16) -> Int
-canonicalizeFileName: extern(canonicalize_file_name) func (__Name: const Char*) -> Char*
-isalpha: extern func (arg0: Int) -> Int
-__BuiltinPrefetch: extern(__builtin_prefetch) func (addr: const Void*, ...)
-iconvOpen: extern(iconv_open) func (__Tocode: const Char*, __Fromcode: const Char*) -> IconvT
-tempnam: extern func (__Dir: const Char*, __Pfx: const Char*) -> Char*
 sdlWriteLE32: extern(SDL_WriteLE32) func (dst: SDLRwops*, value: UInt32) -> Int
-__BuiltinTan: extern(__builtin_tan) func (arg0: Double) -> Double
-srand48: extern func (__Seedval: Long)
-__BuiltinFabsf: extern(__builtin_fabsf) func (arg0: Float) -> Float
-__BuiltinFabsl: extern(__builtin_fabsl) func (arg0: LDouble) -> LDouble
 sdlWriteLE64: extern(SDL_WriteLE64) func (dst: SDLRwops*, value: UInt64) -> Int
-__Overflow: extern(__overflow) func (arg0: Struct_IoFile*, arg1: Int) -> Int
-isspaceL: extern(isspace_l) func (arg0: Int, arg1: __LocaleT) -> Int
-ftello: extern func (__Stream: FILE*) -> __OffT
-mkstemps: extern func (__Template: Char*, __Suffixlen: Int) -> Int
-putenv: extern func (__String: Char*) -> Int
 sdlSoftStretch: extern(SDL_SoftStretch) func (src: SDLSurface*, srcrect: SDLRect*, dst: SDLSurface*, dstrect: SDLRect*) -> Int
-isgraphL: extern(isgraph_l) func (arg0: Int, arg1: __LocaleT) -> Int
 sdlJoystickOpen: extern(SDL_JoystickOpen) func (deviceIndex: Int) -> SDLJoystick*
-fscanf: extern func (__Stream: FILE*, __Format: const Char*, ...) -> Int
-ecvtR: extern(ecvt_r) func (__Value: Double, __Ndigit: Int, __Decpt: Int*, __Sign: Int*, __Buf: Char*, __Len: SizeT) -> Int
-qecvtR: extern(qecvt_r) func (__Value: LDouble, __Ndigit: Int, __Decpt: Int*, __Sign: Int*, __Buf: Char*, __Len: SizeT) -> Int
 sdlUlltoa: extern(SDL_ulltoa) func (value: UInt64, string: Char*, radix: Int) -> Char*
-__BuiltinInf: extern(__builtin_inf) func -> Double
-ffsll: extern func (__Ll: LLong) -> Int
-perror: extern func (__S: const Char*)
-strerrorL: extern(strerror_l) func (__Errnum: Int, __L: __LocaleT) -> Char*
-strerrorR: extern(strerror_r) func (__Errnum: Int, __Buf: Char*, __Buflen: SizeT) -> Char*
-div: extern func (__Numer: Int, __Denom: Int) -> DivT
 sdlMapRGBA: extern(SDL_MapRGBA) func (format: const const SDLPixelFormat*, r: const UInt8, g: const UInt8, b: const UInt8, a: const UInt8) -> UInt32
 sdlCreateRGBSurfaceFrom: extern(SDL_CreateRGBSurfaceFrom) func (pixels: Void*, width: Int, height: Int, depth: Int, pitch: Int, rmask: UInt32, gmask: UInt32, bmask: UInt32, amask: UInt32) -> SDLSurface*
 sdlUpdateRect: extern(SDL_UpdateRect) func (screen: SDLSurface*, x: Int32, y: Int32, w: UInt32, h: UInt32)
 sdlFlip: extern(SDL_Flip) func (screen: SDLSurface*) -> Int
-mrand48: extern func -> Long
-obstackPrintf: extern(obstack_printf) func (__Obstack: Pointer, __Format: const Char*, ...) -> Int
-__BuiltinFrameAddress: extern(__builtin_frame_address) func (level: UInt) -> Void*
-alloca: extern func (__Size: SizeT) -> Void*
 sdlLoadBMPRw: extern(SDL_LoadBMP_RW) func (src: SDLRwops*, freesrc: Int) -> SDLSurface*
-getloadavg: extern func (__Loadavg: Double*, __Nelem: Int) -> Int
-strcat: extern func (__Dest: Char*, __Src: const Char*) -> Char*
-stpncpy: extern func (__Dest: Char*, __Src: const Char*, __N: SizeT) -> Char*
 sdlRwfromMem: extern(SDL_RWFromMem) func (mem: Void*, size: Int) -> SDLRwops*
-fileno: extern func (__Stream: FILE*) -> Int
 sdlInit: extern(SDL_Init) func (flags: UInt32) -> Int
-ferror: extern func (__Stream: FILE*) -> Int
-__BuiltinCabs: extern(__builtin_cabs) func (arg0: Double) -> Double
-isxdigit: extern func (arg0: Int) -> Int
-vfscanf: extern func (__S: FILE*, __Format: const Char*, __Arg: __GnucVaList) -> Int
-lrand48R: extern(lrand48_r) func (__Buffer: StructDrand48Data*, __Result: Long*) -> Int
-qsortR: extern(qsort_r) func (__Base: Void*, __Nmemb: SizeT, __Size: SizeT, __Compar: __ComparDFnT, __Arg: Void*)
-toupperL: extern(toupper_l) func (__C: Int, __L: __LocaleT) -> Int
-setkey: extern func (__Key: const Char*)
-pselect: extern func (__Nfds: Int, __Readfds: FdSet*, __Writefds: FdSet*, __Exceptfds: FdSet*, __Timeout: const StructTimespec*, __Sigmask: const __SigsetT*) -> Int
 sdlHasSSE2: extern(SDL_HasSSE2) func -> Int
-scanf: extern func (__Format: const Char*, ...) -> Int
-strchr: extern func (__S: Char*, __C: Int) -> Char*
 sdlSemPost: extern(SDL_SemPost) func (sem: SDLSem*) -> Int
-__BuiltinAtan2f: extern(__builtin_atan2f) func (arg0: Float, arg1: Float) -> Float
-__BuiltinAtan2l: extern(__builtin_atan2l) func (arg0: LDouble, arg1: LDouble) -> LDouble
-__Bzero: extern(__bzero) func (__S: Void*, __N: SizeT)
-__BuiltinIsinf: extern(__builtin_isinf) func (...) -> Bool
 sdlWaitThread: extern(SDL_WaitThread) func (thread: SDLThread*, status: Int*)
 sdlJoystickNumAxes: extern(SDL_JoystickNumAxes) func (joystick: SDLJoystick*) -> Int
-fsetpos: extern func (__Stream: FILE*, __Pos: const FposT*) -> Int
 sdlLoadFunction: extern(SDL_LoadFunction) func (handle: Void*, name: const Char*) -> Void*
-_IoPutc: extern(_IO_putc) func (__C: Int, __Fp: Struct_IoFile*) -> Int
-strcmp: extern func (__S1: const Char*, __S2: const Char*) -> Int
 sdlLoadWAVRw: extern(SDL_LoadWAV_RW) func (src: SDLRwops*, freesrc: Int, spec: SDLAudioSpec*, audioBuf: UInt8**, audioLen: UInt32*) -> SDLAudioSpec*
 sdlJoystickEventState: extern(SDL_JoystickEventState) func (state: Int) -> Int
-valloc: extern func (__Size: SizeT) -> Void*
-drand48R: extern(drand48_r) func (__Buffer: StructDrand48Data*, __Result: Double*) -> Int
-strcpy: extern func (__Dest: Char*, __Src: const Char*) -> Char*
-__BuiltinCcoshf: extern(__builtin_ccoshf) func (arg0: Float) -> Float
-__WcstollInternal: extern(__wcstoll_internal) func (__Nptr: const WChar*, __Endptr: WChar**, __Base: Int, __Group: Int) -> LLong
-__BuiltinCcoshl: extern(__builtin_ccoshl) func (arg0: LDouble) -> LDouble
-_IoVfprintf: extern(_IO_vfprintf) func (arg0: Struct_IoFile*, arg1: const Char*, arg2: __GnucVaList) -> Int
-fcvtR: extern(fcvt_r) func (__Value: Double, __Ndigit: Int, __Decpt: Int*, __Sign: Int*, __Buf: Char*, __Len: SizeT) -> Int
-qfcvtR: extern(qfcvt_r) func (__Value: LDouble, __Ndigit: Int, __Decpt: Int*, __Sign: Int*, __Buf: Char*, __Len: SizeT) -> Int
 sdlGetError: extern(SDL_GetError) func -> Char*
-strcasestr: extern func (__Haystack: Char*, __Needle: const Char*) -> Char*
 sdlConvertSurface: extern(SDL_ConvertSurface) func (src: SDLSurface*, fmt: SDLPixelFormat*, flags: UInt32) -> SDLSurface*
 sdlSetAlpha: extern(SDL_SetAlpha) func (surface: SDLSurface*, flag: UInt32, alpha: UInt8) -> Int
 sdlCreateSemaphore: extern(SDL_CreateSemaphore) func (initialValue: UInt32) -> SDLSem*
-setbuffer: extern func (__Stream: FILE*, __Buf: Char*, __Size: SizeT)
-_IoFeof: extern(_IO_feof) func (__Fp: Struct_IoFile*) -> Int
-isprint: extern func (arg0: Int) -> Int
 sdlCdclose: extern(SDL_CDClose) func (cdrom: SDLCd*)
-rename: extern func (__Old: const Char*, __New_: const Char*) -> Int
-erand48: extern func (__Xsubi: UShort*) -> Double
-getdelim: extern func (__Lineptr: Char**, __N: SizeT*, __Delimiter: Int, __Stream: FILE*) -> __SsizeT
-basename: extern func (__Filename: Char*) -> Char*
-memfrob: extern func (__S: Void*, __N: SizeT) -> Void*
-__StrtollInternal: extern(__strtoll_internal) func (__Nptr: const Char*, __Endptr: Char**, __Base: Int, __Group: Int) -> LLong
-__BuiltinAtan: extern(__builtin_atan) func (arg0: Double) -> Double
-__BuiltinSinhf: extern(__builtin_sinhf) func (arg0: Float) -> Float
-__BuiltinSinhl: extern(__builtin_sinhl) func (arg0: LDouble) -> LDouble
-__BuiltinSqrtf: extern(__builtin_sqrtf) func (arg0: Float) -> Float
-islowerL: extern(islower_l) func (arg0: Int, arg1: __LocaleT) -> Int
-__BuiltinSqrtl: extern(__builtin_sqrtl) func (arg0: LDouble) -> LDouble
-__BuiltinFrexpf: extern(__builtin_frexpf) func (arg0: Float, arg1: Int*) -> Float
-__BuiltinFrexpl: extern(__builtin_frexpl) func (arg0: LDouble, arg1: Int*) -> LDouble
-__BuiltinCpowf: extern(__builtin_cpowf) func (arg0: Float, arg1: Float) -> Float
-__BuiltinCpowl: extern(__builtin_cpowl) func (arg0: LDouble, arg1: LDouble) -> LDouble
-randomR: extern(random_r) func (__Buf: StructRandomData*, __Result: Int32*) -> Int
 sdlQuitSubSystem: extern(SDL_QuitSubSystem) func (flags: UInt32)
-initstate: extern func (__Seed: UInt, __Statebuf: Char*, __Statelen: SizeT) -> Char*
-islower: extern func (arg0: Int) -> Int
-tolower: extern func (__C: Int) -> Int
-strtoullL: extern(strtoull_l) func (__Nptr: const Char*, __Endptr: Char**, __Base: Int, __Loc: __LocaleT) -> ULLong
 sdlStrlcat: extern(SDL_strlcat) func (dst: Char*, src: const Char*, maxlen: SizeT) -> SizeT
-_IoSgetn: extern(_IO_sgetn) func (arg0: Struct_IoFile*, arg1: Void*, arg2: SizeT) -> SizeT
-clearerrUnlocked: extern(clearerr_unlocked) func (__Stream: FILE*)
 sdlGetGammaRamp: extern(SDL_GetGammaRamp) func (red: UInt16*, green: UInt16*, blue: UInt16*) -> Int
 sdlHasMMXExt: extern(SDL_HasMMXExt) func -> Int
-getsubopt: extern func (__Optionp: Char**, __Tokens: const Char**, __Valuep: Char**) -> Int
 sdlHasRDTSC: extern(SDL_HasRDTSC) func -> Int
-ctermid: extern func (__S: Char*) -> Char*
-fputcUnlocked: extern(fputc_unlocked) func (__C: Int, __Stream: FILE*) -> Int
-strtok: extern func (__S: Char*, __Delim: const Char*) -> Char*
 sdlGetAudioStatus: extern(SDL_GetAudioStatus) func -> Int
-ispunctL: extern(ispunct_l) func (arg0: Int, arg1: __LocaleT) -> Int
-strtokR: extern(strtok_r) func (__S: Char*, __Delim: const Char*, __SavePtr: Char**) -> Char*
-freopen: extern func (__Filename: const Char*, __Modes: const Char*, __Stream: FILE*) -> FILE*
-isprintL: extern(isprint_l) func (arg0: Int, arg1: __LocaleT) -> Int
-isctype: extern func (__C: Int, __Mask: Int) -> Int
 sdlSemTryWait: extern(SDL_SemTryWait) func (sem: SDLSem*) -> Int
-__Stpncpy: extern(__stpncpy) func (__Dest: Char*, __Src: const Char*, __N: SizeT) -> Char*
 sdlCdname: extern(SDL_CDName) func (drive: Int) -> const Char*
 sdlCdstop: extern(SDL_CDStop) func (cdrom: SDLCd*) -> Int
-fputc: extern func (__C: Int, __Stream: FILE*) -> Int
-fputs: extern func (__S: const Char*, __Stream: FILE*) -> Int
-randR: extern(rand_r) func (__Seed: UInt*) -> Int
-memset: extern func (__S: Void*, __C: Int, __N: SizeT) -> Void*
-isupperL: extern(isupper_l) func (arg0: Int, arg1: __LocaleT) -> Int
-_IoFerror: extern(_IO_ferror) func (__Fp: Struct_IoFile*) -> Int
 sdlWarpMouse: extern(SDL_WarpMouse) func (x: UInt16, y: UInt16)
-getcUnlocked: extern(getc_unlocked) func (__Fp: FILE*) -> Int
-strncasecmpL: extern(strncasecmp_l) func (__S1: const Char*, __S2: const Char*, __N: SizeT, __Loc: __LocaleT) -> Int
-ftell: extern func (__Stream: FILE*) -> Long
 sdlWmIconifyWindow: extern(SDL_WM_IconifyWindow) func -> Int
 sdlGlUnlock: extern(SDL_GL_Unlock) func
 sdlAudioInit: extern(SDL_AudioInit) func (driverName: const Char*) -> Int
 sdlSetTimer: extern(SDL_SetTimer) func (interval: UInt32, callback: SDLTimerCallback) -> Int
 sdlRemoveTimer: extern(SDL_RemoveTimer) func (t: SDLTimerID) -> Int
 sdlJoystickNumButtons: extern(SDL_JoystickNumButtons) func (joystick: SDLJoystick*) -> Int
-strndup: extern func (__String: const Char*, __N: SizeT) -> Char*
-__BuiltinTanhf: extern(__builtin_tanhf) func (arg0: Float) -> Float
-__BuiltinTanhl: extern(__builtin_tanhl) func (arg0: LDouble) -> LDouble
 sdlSetClipRect: extern(SDL_SetClipRect) func (surface: SDLSurface*, rect: const SDLRect*) -> Int
-__BuiltinCabsf: extern(__builtin_cabsf) func (arg0: Float) -> Float
-__BuiltinCabsl: extern(__builtin_cabsl) func (arg0: LDouble) -> LDouble
 sdlPauseAudio: extern(SDL_PauseAudio) func (pauseOn: Int)
-__BuiltinPowf: extern(__builtin_powf) func (arg0: Float, arg1: Float) -> Float
-__BuiltinPowi: extern(__builtin_powi) func (arg0: Double, arg1: Int) -> Double
-__BuiltinPowl: extern(__builtin_powl) func (arg0: LDouble, arg1: LDouble) -> LDouble
-strtold: extern func (__Nptr: const Char*, __Endptr: Char**) -> LDouble
-_Toupper: extern(_toupper) func (arg0: Int) -> Int
 sdlCdresume: extern(SDL_CDResume) func (cdrom: SDLCd*) -> Int
-isdigit: extern func (arg0: Int) -> Int
 sdlUpperBlit: extern(SDL_UpperBlit) func (src: SDLSurface*, srcrect: SDLRect*, dst: SDLSurface*, dstrect: SDLRect*) -> Int
-exit: extern func (__Status: Int)
-setstate: extern func (__Statebuf: Char*) -> Char*
-_IoFunlockfile: extern(_IO_funlockfile) func (arg0: Struct_IoFile*)
-pclose: extern func (__Stream: FILE*) -> Int
 sdlStrlwr: extern(SDL_strlwr) func (string: Char*) -> Char*
 sdlReadBE16: extern(SDL_ReadBE16) func (src: SDLRwops*) -> UInt16
 sdlCreateCond: extern(SDL_CreateCond) func -> SDLCond*
-srandom: extern func (__Seed: UInt)
-tmpnamR: extern(tmpnam_r) func (__S: Char*) -> Char*
-gcvt: extern func (__Value: Double, __Ndigit: Int, __Buf: Char*) -> Char*
-qgcvt: extern func (__Value: LDouble, __Ndigit: Int, __Buf: Char*) -> Char*
 sdlPeepEvents: extern(SDL_PeepEvents) func (events: SDLEvent*, numevents: Int, action: Int, mask: UInt32) -> Int
 sdlWmGetCaption: extern(SDL_WM_GetCaption) func (title: Char**, icon: Char**)
 sdlGlUpdateRects: extern(SDL_GL_UpdateRects) func (numrects: Int, rects: SDLRect*)
-malloc: extern func (__Size: SizeT) -> Void*
 sdlKillThread: extern(SDL_KillThread) func (thread: SDLThread*)
-ldiv: extern func (__Numer: Long, __Denom: Long) -> LdivT
 sdlGetRGBA: extern(SDL_GetRGBA) func (pixel: UInt32, fmt: const const SDLPixelFormat*, r: UInt8*, g: UInt8*, b: UInt8*, a: UInt8*)
-__BuiltinCcos: extern(__builtin_ccos) func (arg0: Double) -> Double
 sdlUnlockYUVOverlay: extern(SDL_UnlockYUVOverlay) func (overlay: SDLOverlay*)
 sdlDisplayYUVOverlay: extern(SDL_DisplayYUVOverlay) func (overlay: SDLOverlay*, dstrect: SDLRect*) -> Int
-_IoPeekcLocked: extern(_IO_peekc_locked) func (__Fp: Struct_IoFile*) -> Int
-strcoll: extern func (__S1: const Char*, __S2: const Char*) -> Int
-strncasecmp: extern func (__S1: const Char*, __S2: const Char*, __N: SizeT) -> Int
-strtodL: extern(strtod_l) func (__Nptr: const Char*, __Endptr: Char**, __Loc: __LocaleT) -> Double
-fclose: extern func (__Stream: FILE*) -> Int
-iconvClose: extern(iconv_close) func (__Cd: IconvT) -> Int
 sdlInitSubSystem: extern(SDL_InitSubSystem) func (flags: UInt32) -> Int
-strtollL: extern(strtoll_l) func (__Nptr: const Char*, __Endptr: Char**, __Base: Int, __Loc: __LocaleT) -> LLong
-mkostemps64: extern func (__Template: Char*, __Suffixlen: Int, __Flags: Int) -> Int
-unsetenv: extern func (__Name: const Char*) -> Int
-__StrtokR: extern(__strtok_r) func (__S: Char*, __Delim: const Char*, __SavePtr: Char**) -> Char*
-onExit: extern(on_exit) func (__Func_: Func, __Arg: Void*) -> Int
-calloc: extern func (__Nmemb: SizeT, __Size: SizeT) -> Void*
-__BuiltinExpect: extern(__builtin_expect) func (exp: Long, c: Long) -> Long
-sscanf: extern func (__S: const Char*, __Format: const Char*, ...) -> Int
 sdlCdopen: extern(SDL_CDOpen) func (drive: Int) -> SDLCd*
 sdlSetCursor: extern(SDL_SetCursor) func (cursor: SDLCursor*)
-srand48R: extern(srand48_r) func (__Seedval: Long, __Buffer: StructDrand48Data*) -> Int
-mkostemp64: extern func (__Template: Char*, __Flags: Int) -> Int
 sdlFreeWAV: extern(SDL_FreeWAV) func (audioBuf: UInt8*)
 sdlSemWaitTimeout: extern(SDL_SemWaitTimeout) func (sem: SDLSem*, ms: UInt32) -> Int
 sdlReadBE64: extern(SDL_ReadBE64) func (src: SDLRwops*) -> UInt64
@@ -1360,134 +998,49 @@ sdlDisplayFormatAlpha: extern(SDL_DisplayFormatAlpha) func (surface: SDLSurface*
 sdlCdplayTracks: extern(SDL_CDPlayTracks) func (cdrom: SDLCd*, startTrack: Int, startFrame: Int, ntracks: Int, nframes: Int) -> Int
 sdlEnableKeyRepeat: extern(SDL_EnableKeyRepeat) func (delay: Int, interval: Int) -> Int
 sdlQuit: extern(SDL_Quit) func
-mktemp: extern func (__Template: Char*) -> Char*
-strtolL: extern(strtol_l) func (__Nptr: const Char*, __Endptr: Char**, __Base: Int, __Loc: __LocaleT) -> Long
 sdlWaitEvent: extern(SDL_WaitEvent) func (event: SDLEvent*) -> Int
-fgetsUnlocked: extern(fgets_unlocked) func (__S: Char*, __N: Int, __Stream: FILE*) -> Char*
 sdlGetKeyState: extern(SDL_GetKeyState) func (numkeys: Int*) -> UInt8*
 sdlRwfromFile: extern(SDL_RWFromFile) func (file: const Char*, mode: const Char*) -> SDLRwops*
-__CtypeBLoc: extern(__ctype_b_loc) func -> const UShort**
 sdlCdnumDrives: extern(SDL_CDNumDrives) func -> Int
-lcong48R: extern(lcong48_r) func (__Param: UShort*, __Buffer: StructDrand48Data*) -> Int
 sdlAddTimer: extern(SDL_AddTimer) func (interval: UInt32, callback: SDLNewTimerCallback, param: Void*) -> SDLTimerID
-strsep: extern func (__Stringp: Char**, __Delim: const Char*) -> Char*
-atexit: extern func (__Func_: Func) -> Int
 sdlCdeject: extern(SDL_CDEject) func (cdrom: SDLCd*) -> Int
-__BuiltinFloor: extern(__builtin_floor) func (arg0: Double) -> Double
-isalnumL: extern(isalnum_l) func (arg0: Int, arg1: __LocaleT) -> Int
-__BuiltinLdexp: extern(__builtin_ldexp) func (arg0: Double, arg1: Int) -> Double
 sdlFreeSurface: extern(SDL_FreeSurface) func (surface: SDLSurface*)
-ferrorUnlocked: extern(ferror_unlocked) func (__Stream: FILE*) -> Int
-__WcstoullInternal: extern(__wcstoull_internal) func (__Nptr: const WChar*, __Endptr: WChar**, __Base: Int, __Group: Int) -> ULLong
 sdlReadBE32: extern(SDL_ReadBE32) func (src: SDLRwops*) -> UInt32
-__Uflow: extern(__uflow) func (arg0: Struct_IoFile*) -> Int
-feofUnlocked: extern(feof_unlocked) func (__Stream: FILE*) -> Int
-fputsUnlocked: extern(fputs_unlocked) func (__S: const Char*, __Stream: FILE*) -> Int
-setstateR: extern(setstate_r) func (__Statebuf: Char*, __Buf: StructRandomData*) -> Int
-setenv: extern func (__Name: const Char*, __Value: const Char*, __Replace: Int) -> Int
 sdlFreeCursor: extern(SDL_FreeCursor) func (cursor: SDLCursor*)
-strverscmp: extern func (__S1: const Char*, __S2: const Char*) -> Int
 sdlLockYUVOverlay: extern(SDL_LockYUVOverlay) func (overlay: SDLOverlay*) -> Int
-strtoulL: extern(strtoul_l) func (__Nptr: const Char*, __Endptr: Char**, __Base: Int, __Loc: __LocaleT) -> ULong
 sdlJoystickGetAxis: extern(SDL_JoystickGetAxis) func (joystick: SDLJoystick*, axis: Int) -> Int16
-isalnum: extern func (arg0: Int) -> Int
-__BuiltinCcosf: extern(__builtin_ccosf) func (arg0: Float) -> Float
-__BuiltinCcosh: extern(__builtin_ccosh) func (arg0: Double) -> Double
-__BuiltinCcosl: extern(__builtin_ccosl) func (arg0: LDouble) -> LDouble
-__BuiltinIslessgreater: extern(__builtin_islessgreater) func (...) -> Bool
 sdlGlSetAttribute: extern(SDL_GL_SetAttribute) func (attr: Int, value: Int) -> Int
-vfprintf: extern func (__S: FILE*, __Format: const Char*, __Arg: __GnucVaList) -> Int
 sdlCondBroadcast: extern(SDL_CondBroadcast) func (cond: SDLCond*) -> Int
 sdlSetColors: extern(SDL_SetColors) func (surface: SDLSurface*, colors: SDLColor*, firstcolor: Int, ncolors: Int) -> Int
 sdlCondWaitTimeout: extern(SDL_CondWaitTimeout) func (cond: SDLCond*, mutex: SDLMutex*, ms: UInt32) -> Int
 sdlDestroyMutex: extern(SDL_DestroyMutex) func (mutex: SDLMutex*)
 sdlSetPalette: extern(SDL_SetPalette) func (surface: SDLSurface*, flags: Int, colors: SDLColor*, firstcolor: Int, ncolors: Int) -> Int
 sdlRwfromConstMem: extern(SDL_RWFromConstMem) func (mem: const Void*, size: Int) -> SDLRwops*
-a64l: extern func (__S: const Char*) -> Long
-strspn: extern func (__S: const Char*, __Accept: const Char*) -> SizeT
-__SecureGetenv: extern(__secure_getenv) func (__Name: const Char*) -> Char*
-_IoGetc: extern(_IO_getc) func (__Fp: Struct_IoFile*) -> Int
-__BuiltinCtanhf: extern(__builtin_ctanhf) func (arg0: Float) -> Float
-__BuiltinCtanhl: extern(__builtin_ctanhl) func (arg0: LDouble) -> LDouble
-vdprintf: extern func (__Fd: Int, __Fmt: const Char*, __Arg: __GnucVaList) -> Int
-openMemstream: extern(open_memstream) func (__Bufloc: Char**, __Sizeloc: SizeT*) -> FILE*
 sdlReadLE16: extern(SDL_ReadLE16) func (src: SDLRwops*) -> UInt16
 sdlError: extern(SDL_Error) func (code: Int)
 sdlWmSetIcon: extern(SDL_WM_SetIcon) func (icon: SDLSurface*, mask: UInt8*)
-strstr: extern func (__Haystack: Char*, __Needle: const Char*) -> Char*
 sdlUpdateRects: extern(SDL_UpdateRects) func (screen: SDLSurface*, numrects: Int, rects: SDLRect*)
-ispunct: extern func (arg0: Int) -> Int
-ecvt: extern func (__Value: Double, __Ndigit: Int, __Decpt: Int*, __Sign: Int*) -> Char*
-__BuiltinCeilf: extern(__builtin_ceilf) func (arg0: Float) -> Float
-__BuiltinCeill: extern(__builtin_ceill) func (arg0: LDouble) -> LDouble
 sdlNumJoysticks: extern(SDL_NumJoysticks) func -> Int
 sdlLockAudio: extern(SDL_LockAudio) func
-index: extern func (__S: Char*, __C: Int) -> Char*
 sdlWmGrabInput: extern(SDL_WM_GrabInput) func (mode: Int) -> Int
 sdlAudioDriverName: extern(SDL_AudioDriverName) func (namebuf: Char*, maxlen: Int) -> Char*
-__BuiltinCsinf: extern(__builtin_csinf) func (arg0: Float) -> Float
-__BuiltinCsinh: extern(__builtin_csinh) func (arg0: Double) -> Double
-__BuiltinCsinl: extern(__builtin_csinl) func (arg0: LDouble) -> LDouble
-isdigitL: extern(isdigit_l) func (arg0: Int, arg1: __LocaleT) -> Int
-__BuiltinAcos: extern(__builtin_acos) func (arg0: Double) -> Double
-strlen: extern func (__S: const Char*) -> SizeT
-nrand48: extern func (__Xsubi: UShort*) -> Long
-rewind: extern func (__Stream: FILE*)
-__BuiltinCtzll: extern(__builtin_ctzll) func (arg0: LLong) -> Int
-fflushUnlocked: extern(fflush_unlocked) func (__Stream: FILE*) -> Int
-memmem: extern func (__Haystack: const Void*, __Haystacklen: SizeT, __Needle: const Void*, __Needlelen: SizeT) -> Void*
-__BuiltinCargf: extern(__builtin_cargf) func (arg0: Float) -> Float
-__BuiltinCargl: extern(__builtin_cargl) func (arg0: LDouble) -> LDouble
-quickExit: extern(quick_exit) func (__Status: Int)
-freadUnlocked: extern(fread_unlocked) func (__Ptr: Void*, __Size: SizeT, __N: SizeT, __Stream: FILE*) -> SizeT
 sdlStrlcpy: extern(SDL_strlcpy) func (dst: Char*, src: const Char*, maxlen: SizeT) -> SizeT
 sdlGetClipRect: extern(SDL_GetClipRect) func (surface: SDLSurface*, rect: SDLRect*)
 sdlCdstatus: extern(SDL_CDStatus) func (cdrom: SDLCd*) -> Int
 sdlWmSetCaption: extern(SDL_WM_SetCaption) func (title: const Char*, icon: const Char*)
-__BuiltinCosf: extern(__builtin_cosf) func (arg0: Float) -> Float
-__BuiltinCosh: extern(__builtin_cosh) func (arg0: Double) -> Double
-__BuiltinCosl: extern(__builtin_cosl) func (arg0: LDouble) -> LDouble
-_IoPadn: extern(_IO_padn) func (arg0: Struct_IoFile*, arg1: Int, arg2: __SsizeT) -> __SsizeT
-flockfile: extern func (__Stream: FILE*)
 sdlCreateThread: extern(SDL_CreateThread) func (fn: Func, data: Void*) -> SDLThread*
-lrand48: extern func -> Long
 sdlGetVideoSurface: extern(SDL_GetVideoSurface) func -> SDLSurface*
-nrand48R: extern(nrand48_r) func (__Xsubi: UShort*, __Buffer: StructDrand48Data*, __Result: Long*) -> Int
 sdlGetRelativeMouseState: extern(SDL_GetRelativeMouseState) func (x: Int*, y: Int*) -> UInt8
 sdlClearError: extern(SDL_ClearError) func
-ffs: extern func (__I: Int) -> Int
-select: extern func (__Nfds: Int, __Readfds: FdSet*, __Writefds: FdSet*, __Exceptfds: FdSet*, __Timeout: StructTimeval*) -> Int
-vscanf: extern func (__Format: const Char*, __Arg: __GnucVaList) -> Int
-__TolowerL: extern(__tolower_l) func (__C: Int, __L: __LocaleT) -> Int
-__BuiltinIsgreater: extern(__builtin_isgreater) func (...) -> Bool
 sdlJoystickName: extern(SDL_JoystickName) func (deviceIndex: Int) -> const Char*
 sdlWasInit: extern(SDL_WasInit) func (flags: UInt32) -> UInt32
-feof: extern func (__Stream: FILE*) -> Int
 sdlGetRGB: extern(SDL_GetRGB) func (pixel: UInt32, fmt: const const SDLPixelFormat*, r: UInt8*, g: UInt8*, b: UInt8*)
-jrand48R: extern(jrand48_r) func (__Xsubi: UShort*, __Buffer: StructDrand48Data*, __Result: Long*) -> Int
-fgetc: extern func (__Stream: FILE*) -> Int
-fgets: extern func (__S: Char*, __N: Int, __Stream: FILE*) -> Char*
-__ToupperL: extern(__toupper_l) func (__C: Int, __L: __LocaleT) -> Int
 sdlJoystickGetHat: extern(SDL_JoystickGetHat) func (joystick: SDLJoystick*, hat: Int) -> UInt8
-rand: extern func -> Int
 sdlGetEventFilter: extern(SDL_GetEventFilter) func -> SDLEventFilter
-memrchr: extern func (__S: Void*, __C: Int, __N: SizeT) -> Void*
 sdlFillRect: extern(SDL_FillRect) func (dst: SDLSurface*, dstrect: SDLRect*, color: UInt32) -> Int
-seed48: extern func (__Seed16v: UShort*) -> UShort*
-mempcpy: extern func (__Dest: Void*, __Src: const Void*, __N: SizeT) -> Void*
 sdlSetModState: extern(SDL_SetModState) func (modstate: Int)
-isgraph: extern func (arg0: Int) -> Int
-__BuiltinSinf: extern(__builtin_sinf) func (arg0: Float) -> Float
-__BuiltinSinh: extern(__builtin_sinh) func (arg0: Double) -> Double
-__BuiltinSinl: extern(__builtin_sinl) func (arg0: LDouble) -> LDouble
 sdlDisplayFormat: extern(SDL_DisplayFormat) func (surface: SDLSurface*) -> SDLSurface*
-__BuiltinCsin: extern(__builtin_csin) func (arg0: Double) -> Double
 sdlThreadID: extern(SDL_ThreadID) func -> UInt32
-lldiv: extern func (__Numer: LLong, __Denom: LLong) -> LldivT
-_IoVfscanf: extern(_IO_vfscanf) func (arg0: Struct_IoFile*, arg1: const Char*, arg2: __GnucVaList, arg3: Int*) -> Int
-_IoFtrylockfile: extern(_IO_ftrylockfile) func (arg0: Struct_IoFile*) -> Int
-strcollL: extern(strcoll_l) func (__S1: const Char*, __S2: const Char*, __L: __LocaleT) -> Int
-abs: extern func (__X: Int) -> Int
 sdlJoystickOpened: extern(SDL_JoystickOpened) func (deviceIndex: Int) -> Int
 sdlSetGammaRamp: extern(SDL_SetGammaRamp) func (red: const UInt16*, green: const UInt16*, blue: const UInt16*) -> Int
 sdlLockSurface: extern(SDL_LockSurface) func (surface: SDLSurface*) -> Int
