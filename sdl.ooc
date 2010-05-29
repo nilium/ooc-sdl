@@ -715,6 +715,11 @@ EnumSDLOverlayFormats: enum {
     yvyuOverlay = 0x55595659
 }
 
+EnumSDLPaletteFlags: enum {
+    logPal = 0x01
+    physPal = 0x02
+}
+
 SDLVersion_: cover from StructSDLVersion_
 
 SDLCond: cover
