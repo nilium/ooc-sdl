@@ -1,4 +1,4 @@
-include SDL/SDL
+include SDL
 
 StructSDLVersion_: cover from struct SDL_version {
     major: extern UInt8
