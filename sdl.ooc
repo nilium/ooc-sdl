@@ -633,6 +633,86 @@ EnumSDLEventMask: enum {
     videoexposemask = 131072
     quitmask = 4096
     syswmeventmask = 8192
+    allevents = 0xFFFFFFFF
+}
+
+EnumSDLInitFlags: enum {
+    initTimer = 0x00000001
+    initAudio = 0x00000010
+    initVideo = 0x00000020
+    initCDROM = 0x00000100
+    initJoystick = 0x00000200
+    initNoParachute = 0x00100001
+    initEventThread = 0x01000001
+    initEverything = 0x0000FFFF
+}
+
+EnumSDLApplicationStates: enum {
+    mouseFocus = 0x01
+    inputFocus = 0x02
+    active = 0x04
+}
+
+EnumSDLCDROMTrackTypes: enum {
+    audioTrack = 0x00
+    dataTrack = 0x04
+}
+
+EnumSDLEndianness: enum {
+    lilEndian = 1234
+    bigEndian = 4321
+}
+
+EnumSDLEventState: enum {
+    query = -1
+    ignore = 0
+    disable = 0
+    enable = 1
+}
+
+EnumSDLHatPosition: enum {
+    centered = 0x00
+    up = 0x01
+    right = 0x02
+    down = 0x04
+    left = 0x08
+    rightUp = 0x03
+    rightDown = 0x06
+    leftUp = 0x09
+    leftDown = 0x0C
+}
+
+EnumSDLMouseButtonMask: enum {
+    left = 1
+    middle = 2
+    right = 4
+    wheelup = 8
+    wheeldown = 16
+    x1 = 32
+    x2 = 64
+}
+
+EnumSDLSurfaceFlags: enum {
+    swSurface = 0x00000000
+    hwSurface = 0x00000001
+    asyncBlit = 0x00000004
+    // the following can only be used with sdlSetVideoMode
+    anyFormat = 0x10000000
+    hwPalette = 0x20000000
+    doubleBuf = 0x40000000
+    fullscreen = 0x80000000
+    opengl = 0x00000002
+    openglBlit = 0x0000000A
+    resizable = 0x00000010
+    noframe = 0x00000020
+}
+
+EnumSDLOverlayFormats: enum {
+    yv12Overlay = 0x32315659
+    iyuvOverlay = 0x56555949
+    yuy2Overlay = 0x32595559
+    uyvyOverlay = 0x59565955
+    yvyuOverlay = 0x55595659
 }
 
 SDLVersion_: cover from StructSDLVersion_
@@ -809,7 +889,7 @@ sdlUpdateRect: extern(SDL_UpdateRect) func (screen: SDLSurface*, x: Int32, y: In
 sdlFlip: extern(SDL_Flip) func (screen: SDLSurface*) -> Int
 sdlLoadBMPRw: extern(SDL_LoadBMP_RW) func (src: SDLRwops*, freesrc: Int) -> SDLSurface*
 sdlRwfromMem: extern(SDL_RWFromMem) func (mem: Void*, size: Int) -> SDLRwops*
-sdlInit: extern(SDL_Init) func (flags: UInt32) -> Int
+sdlInit: extern(SDL_Init) func (flags: EnumSDLInitFlags) -> Int
 sdlHasSSE2: extern(SDL_HasSSE2) func -> Int
 sdlSemPost: extern(SDL_SemPost) func (sem: SDLSem*) -> Int
 sdlWaitThread: extern(SDL_WaitThread) func (thread: SDLThread*, status: Int*)
@@ -822,7 +902,7 @@ sdlConvertSurface: extern(SDL_ConvertSurface) func (src: SDLSurface*, fmt: SDLPi
 sdlSetAlpha: extern(SDL_SetAlpha) func (surface: SDLSurface*, flag: UInt32, alpha: UInt8) -> Int
 sdlCreateSemaphore: extern(SDL_CreateSemaphore) func (initialValue: UInt32) -> SDLSem*
 sdlCdclose: extern(SDL_CDClose) func (cdrom: SDLCd*)
-sdlQuitSubSystem: extern(SDL_QuitSubSystem) func (flags: UInt32)
+sdlQuitSubSystem: extern(SDL_QuitSubSystem) func (flags: EnumSDLInitFlags)
 sdlStrlcat: extern(SDL_strlcat) func (dst: Char*, src: const Char*, maxlen: SizeT) -> SizeT
 sdlGetGammaRamp: extern(SDL_GetGammaRamp) func (red: UInt16*, green: UInt16*, blue: UInt16*) -> Int
 sdlHasMMXExt: extern(SDL_HasMMXExt) func -> Int
@@ -852,7 +932,7 @@ sdlKillThread: extern(SDL_KillThread) func (thread: SDLThread*)
 sdlGetRGBA: extern(SDL_GetRGBA) func (pixel: UInt32, fmt: const const SDLPixelFormat*, r: UInt8*, g: UInt8*, b: UInt8*, a: UInt8*)
 sdlUnlockYUVOverlay: extern(SDL_UnlockYUVOverlay) func (overlay: SDLOverlay*)
 sdlDisplayYUVOverlay: extern(SDL_DisplayYUVOverlay) func (overlay: SDLOverlay*, dstrect: SDLRect*) -> Int
-sdlInitSubSystem: extern(SDL_InitSubSystem) func (flags: UInt32) -> Int
+sdlInitSubSystem: extern(SDL_InitSubSystem) func (flags: EnumSDLInitFlags) -> Int
 sdlCdopen: extern(SDL_CDOpen) func (drive: Int) -> SDLCd*
 sdlSetCursor: extern(SDL_SetCursor) func (cursor: SDLCursor*)
 sdlFreeWAV: extern(SDL_FreeWAV) func (audioBuf: UInt8*)
@@ -924,7 +1004,7 @@ sdlGetVideoSurface: extern(SDL_GetVideoSurface) func -> SDLSurface*
 sdlGetRelativeMouseState: extern(SDL_GetRelativeMouseState) func (x: Int*, y: Int*) -> UInt8
 sdlClearError: extern(SDL_ClearError) func
 sdlJoystickName: extern(SDL_JoystickName) func (deviceIndex: Int) -> const Char*
-sdlWasInit: extern(SDL_WasInit) func (flags: UInt32) -> UInt32
+sdlWasInit: extern(SDL_WasInit) func (flags: EnumSDLInitFlags) -> UInt32
 sdlGetRGB: extern(SDL_GetRGB) func (pixel: UInt32, fmt: const const SDLPixelFormat*, r: UInt8*, g: UInt8*, b: UInt8*)
 sdlJoystickGetHat: extern(SDL_JoystickGetHat) func (joystick: SDLJoystick*, hat: Int) -> UInt8
 sdlGetEventFilter: extern(SDL_GetEventFilter) func -> SDLEventFilter
@@ -935,4 +1015,6 @@ sdlThreadID: extern(SDL_ThreadID) func -> UInt32
 sdlJoystickOpened: extern(SDL_JoystickOpened) func (deviceIndex: Int) -> Int
 sdlSetGammaRamp: extern(SDL_SetGammaRamp) func (red: const UInt16*, green: const UInt16*, blue: const UInt16*) -> Int
 sdlLockSurface: extern(SDL_LockSurface) func (surface: SDLSurface*) -> Int
-
+sdlLoadBMP: extern(SDL_LoadBMP) func(file: String) -> SDLSurface*
+sdlSaveBMP: extern(SDL_LoadBMP) func(surface: SDLSurface*, file: String) -> Int
+sdlLoadWAV: extern(SDL_LoadWAV) func(file: String, spec: SDLAudioSpec*, audio_buf: UInt8**, audio_len: UInt32*)
