@@ -168,7 +168,7 @@ StructSDLJoyAxisEvent: cover from struct SDL_JoyAxisEvent {
     value: extern Sint16
 }
 
-UnionSDLEvent: cover from union SDL_Event {
+UnionSDLEvent: cover from SDL_Event {
     type: extern Uint8
     active: extern SDLActiveEvent
     key: extern SDLKeyboardEvent
@@ -577,9 +577,6 @@ EnumSDLGrabMode: extern(SDL_GrabMode) enum {
     on = 1
     fullscreen = 2
 }
-EnumSDLDummyEnum_: extern(SDL_DUMMY_ENUM) enum {
-    dummyEnum_Value = 0
-}
 EnumUnnamed11: enum {
     upper = 256
     lower = 512
@@ -648,17 +645,6 @@ Enum__CodecvtResult: extern(__codecvt_result) enum {
     error = 2
     noconv = 3
 }
-BlksizeT: cover from __blksize_t
-
-UintLeast64T: cover from ULLong
-
-__SwblkT: cover from Long
-
-SigsetT: cover from __SigsetT
-
-Blkcnt64T: cover from __blkcnt64_t
-
-_IoLockT: cover from Void
 
 SDLVersion_: cover from StructSDLVersion_
 
