@@ -6,51 +6,6 @@ StructSDLVersion_: cover from struct SDL_version {
     patch: extern Uint8
 }
 
-Struct_IoFile: cover from struct _IO_FILE {
-    _Flags: extern(_flags) Int
-    _IoReadPtr: extern(_IO_read_ptr) Char*
-    _IoReadEnd: extern(_IO_read_end) Char*
-    _IoReadBase: extern(_IO_read_base) Char*
-    _IoWriteBase: extern(_IO_write_base) Char*
-    _IoWritePtr: extern(_IO_write_ptr) Char*
-    _IoWriteEnd: extern(_IO_write_end) Char*
-    _IoBufBase: extern(_IO_buf_base) Char*
-    _IoBufEnd: extern(_IO_buf_end) Char*
-    _IoSaveBase: extern(_IO_save_base) Char*
-    _IoBackupBase: extern(_IO_backup_base) Char*
-    _IoSaveEnd: extern(_IO_save_end) Char*
-    _Markers: extern(_markers) Struct_IoMarker*
-    _Chain: extern(_chain) Struct_IoFile*
-    _Fileno: extern(_fileno) Int
-    _Flags2: extern(_flags2) Int
-    _OldOffset: extern(_old_offset) __OffT
-    _CurColumn: extern(_cur_column) UShort
-    _VtableOffset: extern(_vtable_offset) Char
-    _Shortbuf: extern(_shortbuf) Char*
-    _Lock: extern(_lock) _IoLockT*
-    _Offset: extern(_offset) __Off64T
-    __Pad1: extern(__pad1) Void*
-    __Pad2: extern(__pad2) Void*
-    __Pad3: extern(__pad3) Void*
-    __Pad4: extern(__pad4) Void*
-    __Pad5: extern(__pad5) SizeT
-    _Mode: extern(_mode) Int
-    _Unused2: extern(_unused2) Char*
-}
-
-UnionUnnamed16: cover {
-    __Size: extern(__size) Char*
-    __Align: extern(__align) Long
-}
-
-PthreadMutexattrT: cover from UnionUnnamed16
-
-StructUnnamed17: cover {
-    fdsBits: extern(fds_bits) __FdMask*
-}
-
-FdSet: cover from StructUnnamed17
-
 StructSDLAudioCVT: cover from struct SDL_AudioCVT {
     needed: extern Int
     srcFormat: extern(src_format) Uint16
@@ -65,14 +20,6 @@ StructSDLAudioCVT: cover from struct SDL_AudioCVT {
     filterIndex: extern(filter_index) Int
 }
 
-Struct__LocaleStruct_: cover from struct __locale_struct {
-    __Locales: extern(__locales) Pointer*
-    __CtypeB: extern(__ctype_b) const UShort*
-    __CtypeTolower: extern(__ctype_tolower) const Int*
-    __CtypeToupper: extern(__ctype_toupper) const Int*
-    __Names: extern(__names) const Char**
-}
-
 StructSDLJoyHatEvent: cover from struct SDL_JoyHatEvent {
     type: extern Uint8
     which: extern Uint8
@@ -85,53 +32,12 @@ StructUnnamed18: cover {
     __State: extern(__state) __MbstateT
 }
 
-_GFposT: cover from StructUnnamed18
-
-UnionUnnamed19: cover {
-    __Data: extern(__data) StructUnnamed1
-    __Size: extern(__size) Char*
-    __Align: extern(__align) LLong
-}
-
-PthreadCondT: cover from UnionUnnamed19
-
-StructUnnamed1: cover {
-    __Lock: extern(__lock) Int
-    __Futex: extern(__futex) UInt
-    __TotalSeq: extern(__total_seq) ULLong
-    __WakeupSeq: extern(__wakeup_seq) ULLong
-    __WokenSeq: extern(__woken_seq) ULLong
-    __Mutex: extern(__mutex) Void*
-    __Nwaiters: extern(__nwaiters) UInt
-    __BroadcastSeq: extern(__broadcast_seq) UInt
-}
-
-UnionUnnamed20: cover {
-    __Size: extern(__size) Char*
-    __Align: extern(__align) Long
-}
-
-PthreadBarrierT: cover from UnionUnnamed20
-
-StructUnnamed21: cover {
-    __Val: extern(__val) Int*
-}
-
-__FsidT: cover from StructUnnamed21
-
 StructSDLColor: cover from struct SDL_Color {
     r: extern Uint8
     g: extern Uint8
     b: extern Uint8
     unused: extern Uint8
 }
-
-StructUnnamed22: cover {
-    __Pos: extern(__pos) __Off64T
-    __State: extern(__state) __MbstateT
-}
-
-_GFpos64T: cover from StructUnnamed22
 
 StructSDLKeysym: cover from struct SDL_keysym {
     scancode: extern Uint8
@@ -149,18 +55,6 @@ StructSDLJoyButtonEvent: cover from struct SDL_JoyButtonEvent {
 
 StructSDLQuitEvent: cover from struct SDL_QuitEvent {
     type: extern Uint8
-}
-
-StructUnnamed23: cover {
-    quot: extern Int
-    rem: extern Int
-}
-
-DivT: cover from StructUnnamed23
-
-StructTimespec: cover from struct timespec {
-    tvSec: extern(tv_sec) __TimeT
-    tvNsec: extern(tv_nsec) Long
 }
 
 StructSDLOverlay: cover from struct SDL_Overlay {
@@ -186,51 +80,6 @@ StructSDLMouseMotionEvent: cover from struct SDL_MouseMotionEvent {
     yrel: extern Sint16
 }
 
-StructUnnamed24: cover {
-    __Count: extern(__count) Int
-    __Value: extern(__value) UnionUnnamed2
-}
-
-__MbstateT: cover from StructUnnamed24
-
-UnionUnnamed2: cover {
-    __Wch: extern(__wch) UInt
-    __Wchb: extern(__wchb) Char*
-}
-
-UnionWait: cover from union wait {
-    wStatus: extern(w_status) Int
-    __WaitTerminated: extern(__wait_terminated) StructUnnamed3
-    __WaitStopped: extern(__wait_stopped) StructUnnamed4
-}
-
-StructUnnamed3: cover {
-    __WTermsig: extern(__w_termsig) UInt
-    __WCoredump: extern(__w_coredump) UInt
-    __WRetcode: extern(__w_retcode) UInt
-    _: extern(_) UInt
-}
-
-StructUnnamed4: cover {
-    __WStopval: extern(__w_stopval) UInt
-    __WStopsig: extern(__w_stopsig) UInt
-    _: extern(_) UInt
-}
-
-StructUnnamed25: cover {
-    quot: extern LLong
-    rem: extern LLong
-}
-
-LldivT: cover from StructUnnamed25
-
-UnionUnnamed26: cover {
-    __Size: extern(__size) Char*
-    __Align: extern(__align) Int
-}
-
-PthreadBarrierattrT: cover from UnionUnnamed26
-
 StructSDLJoyBallEvent: cover from struct SDL_JoyBallEvent {
     type: extern Uint8
     which: extern Uint8
@@ -248,39 +97,11 @@ StructSDLRwops: cover from struct SDL_RWops {
     hidden: extern UnionUnnamed5
 }
 
-UnionUnnamed5: cover {
-    stdio: extern StructUnnamed6
-    mem: extern StructUnnamed7
-    unknown: extern StructUnnamed8
-}
-
-StructUnnamed6: cover {
-    autoclose: extern Int
-    fp: extern FILE*
-}
-
-StructUnnamed7: cover {
-    base: extern Uint8*
-    here: extern Uint8*
-    stop: extern Uint8*
-}
-
-StructUnnamed8: cover {
-    data1: extern Void*
-}
-
 StructSDLActiveEvent: cover from struct SDL_ActiveEvent {
     type: extern Uint8
     gain: extern Uint8
     state: extern Uint8
 }
-
-UnionUnnamed27: cover {
-    __Size: extern(__size) Char*
-    __Align: extern(__align) Long
-}
-
-PthreadRwlockattrT: cover from UnionUnnamed27
 
 StructSDLExposeEvent: cover from struct SDL_ExposeEvent {
     type: extern Uint8
@@ -299,28 +120,6 @@ StructSDLPalette: cover from struct SDL_Palette {
     colors: extern SDLColor*
 }
 
-UnionUnnamed28: cover {
-    __Data: extern(__data) Struct__PthreadMutexS
-    __Size: extern(__size) Char*
-    __Align: extern(__align) Long
-}
-
-PthreadMutexT: cover from UnionUnnamed28
-
-Struct__PthreadMutexS: cover from struct __pthread_mutex_s {
-    __Lock: extern(__lock) Int
-    __Count: extern(__count) UInt
-    __Owner: extern(__owner) Int
-    __Kind: extern(__kind) Int
-    __Nusers: extern(__nusers) UInt
-    _: extern(_) UnionUnnamed9
-}
-
-UnionUnnamed9: cover {
-    __Spins: extern(__spins) Int
-    __List: extern(__list) __PthreadSlistT
-}
-
 StructSDLCd: cover from struct SDL_CD {
     id: extern Int
     status: extern Int
@@ -328,12 +127,6 @@ StructSDLCd: cover from struct SDL_CD {
     curTrack: extern(cur_track) Int
     curFrame: extern(cur_frame) Int
     track: extern SDLCdtrack*
-}
-
-Struct_IoMarker: cover from struct _IO_marker {
-    _Next: extern(_next) Struct_IoMarker*
-    _Sbuf: extern(_sbuf) Struct_IoFile*
-    _Pos: extern(_pos) Int
 }
 
 StructSDLMouseButtonEvent: cover from struct SDL_MouseButtonEvent {
@@ -367,13 +160,6 @@ StructSDLResizeEvent: cover from struct SDL_ResizeEvent {
     w: extern Int
     h: extern Int
 }
-
-UnionUnnamed29: cover {
-    __Size: extern(__size) Char*
-    __Align: extern(__align) Long
-}
-
-PthreadAttrT: cover from UnionUnnamed29
 
 StructSDLJoyAxisEvent: cover from struct SDL_JoyAxisEvent {
     type: extern Uint8
@@ -433,35 +219,6 @@ StructSDLSurface: cover from struct SDL_Surface {
     refcount: extern Int
 }
 
-UnionUnnamed30: cover {
-    __Data: extern(__data) StructUnnamed10
-    __Size: extern(__size) Char*
-    __Align: extern(__align) Long
-}
-
-PthreadRwlockT: cover from UnionUnnamed30
-
-StructUnnamed10: cover {
-    __Lock: extern(__lock) Int
-    __NrReaders: extern(__nr_readers) UInt
-    __ReadersWakeup: extern(__readers_wakeup) UInt
-    __WriterWakeup: extern(__writer_wakeup) UInt
-    __NrReadersQueued: extern(__nr_readers_queued) UInt
-    __NrWritersQueued: extern(__nr_writers_queued) UInt
-    __Flags: extern(__flags) UChar
-    __Shared: extern(__shared) UChar
-    __Pad1: extern(__pad1) UChar
-    __Pad2: extern(__pad2) UChar
-    __Writer: extern(__writer) Int
-}
-
-StructUnnamed31: cover {
-    quot: extern Long
-    rem: extern Long
-}
-
-LdivT: cover from StructUnnamed31
-
 StructSDLUserEvent: cover from struct SDL_UserEvent {
     type: extern Uint8
     code: extern Int
@@ -494,14 +251,6 @@ StructSDLKeyboardEvent: cover from struct SDL_KeyboardEvent {
     which: extern Uint8
     state: extern Uint8
     keysym: extern SDLKeysym
-}
-
-StructDrand48Data: cover from struct drand48_data {
-    __X: extern(__x) UShort*
-    __OldX: extern(__old_x) UShort*
-    __C: extern(__c) UShort
-    __Init: extern(__init) UShort
-    __A: extern(__a) ULLong
 }
 
 StructSDLVideoInfo: cover from struct SDL_VideoInfo {
