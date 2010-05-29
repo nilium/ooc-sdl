@@ -27,11 +27,6 @@ StructSDLJoyHatEvent: cover from struct SDL_JoyHatEvent {
     value: extern UInt8
 }
 
-StructUnnamed18: cover {
-    __Pos: extern(__pos) __OffT
-    __State: extern(__state) __MbstateT
-}
-
 StructSDLColor: cover from struct SDL_Color {
     r: extern UInt8
     g: extern UInt8
@@ -94,7 +89,6 @@ StructSDLRwops: cover from struct SDL_RWops {
     write: extern Func
     close: extern Func
     type: extern UInt32
-    hidden: extern UnionUnnamed5
 }
 
 StructSDLActiveEvent: cover from struct SDL_ActiveEvent {
@@ -272,16 +266,16 @@ StructSDLVideoInfo: cover from struct SDL_VideoInfo {
     currentH: extern(current_h) Int
 }
 
-EnumSDLAudiostatus: extern(SDL_audiostatus) enum {
+EnumSDLAudiostatus: enum {
     stopped = 0
     playing = 1
     paused = 2
 }
-EnumSDLBool_: extern(SDL_bool) enum {
+EnumSDLBool_: enum {
     false_ = 0
     true_ = 1
 }
-EnumSDLGlattr: extern(SDL_GLattr) enum {
+EnumSDLGlattr: enum {
     redSize = 0
     greenSize = 1
     blueSize = 2
@@ -300,14 +294,14 @@ EnumSDLGlattr: extern(SDL_GLattr) enum {
     acceleratedVisual = 15
     swapControl = 16
 }
-EnumCDstatus: extern(CDstatus) enum {
+EnumCDstatus: enum {
     trayempty = 0
     stopped = 1
     playing = 2
     paused = 3
     error = -1
 }
-EnumSDLMod: extern(SDLMod) enum {
+EnumSDLMod: enum {
     none = 0
     lshift = 1
     rshift = 2
@@ -322,7 +316,7 @@ EnumSDLMod: extern(SDLMod) enum {
     mode = 16384
     reserved = 32768
 }
-EnumSDLErrorcode: extern(SDL_errorcode) enum {
+EnumSDLErrorcode: enum {
     enomem = 0
     efread = 1
     efwrite = 2
@@ -330,7 +324,7 @@ EnumSDLErrorcode: extern(SDL_errorcode) enum {
     unsupported = 4
     lasterror = 5
 }
-EnumSDLKey: extern(SDLKey) enum {
+EnumSDLKey: enum {
     unknown = 0
     first = 0
     backspace = 8
@@ -566,12 +560,12 @@ EnumSDLKey: extern(SDLKey) enum {
     undo = 322
     last = 323
 }
-EnumSDLEventaction: extern(SDL_eventaction) enum {
+EnumSDLEventaction: enum {
     addevent = 0
     peekevent = 1
     getevent = 2
 }
-EnumSDLGrabMode: extern(SDL_GrabMode) enum {
+EnumSDLGrabMode: enum {
     query = -1
     off = 0
     on = 1
@@ -591,7 +585,7 @@ EnumUnnamed11: enum {
     punct = 4
     alnum = 8
 }
-EnumSDLEventType: extern(SDL_EventType) enum {
+EnumSDLEventType: enum {
     noevent = 0
     activeevent = 1
     keydown = 2
@@ -619,7 +613,8 @@ EnumSDLEventType: extern(SDL_EventType) enum {
     userevent = 24
     numevents = 32
 }
-EnumSDLEventMask: extern(SDL_EventMask) enum {
+
+EnumSDLEventMask: enum {
     activeeventmask = 2
     keydownmask = 4
     keyupmask = 8
@@ -638,12 +633,6 @@ EnumSDLEventMask: extern(SDL_EventMask) enum {
     videoexposemask = 131072
     quitmask = 4096
     syswmeventmask = 8192
-}
-Enum__CodecvtResult: extern(__codecvt_result) enum {
-    ok = 0
-    partial = 1
-    error = 2
-    noconv = 3
 }
 
 SDLVersion_: cover from StructSDLVersion_
@@ -668,52 +657,23 @@ WMcursor: cover
 
 SDLQuitEvent: cover from StructSDLQuitEvent
 
-
-UintLeast32T: cover from UInt
-
-
-
 SDLOverlay: cover from StructSDLOverlay
 
 SDLMouseMotionEvent: cover from StructSDLMouseMotionEvent
-
-FsblkcntT: cover from __fsblkcnt_t
-
-
-
-IntFast8T: cover from Char
 
 SDLJoyBallEvent: cover from StructSDLJoyBallEvent
 
 SDLThread: cover
 
-CookieReadFunctionT: cover from __io_read_fn
-
 SDLRwops: cover from StructSDLRwops
 
 SDLActiveEvent: cover from StructSDLActiveEvent
 
-BlkcntT: cover from __blkcnt_t
-
-
-IntFast16T: cover from Int
-
-IdT: cover from __IdT
-
-
-
 SDLExposeEvent: cover from StructSDLExposeEvent
-
 
 SDLTimerCallback: cover from Func
 
-FILE: cover from Struct_IoFile
-
-Fsfilcnt64T: cover from __fsfilcnt64_t
-
 SDLMutex: cover
-
-UintFast64T: cover from ULLong
 
 SDLEventFilter: cover from Func
 
@@ -721,95 +681,31 @@ SDLCdtrack: cover from StructSDLCdtrack
 
 SDLPalette: cover from StructSDLPalette
 
-
-
 SDLCd: cover from StructSDLCd
-
-
-SusecondsT: cover from __SusecondsT
-
-PidT: cover from __PidT
-
-IntLeast16T: cover from Short
-
-LocaleT: cover from __locale_t
-
-
-UintptrT: cover from UInt
-
-SsizeT: cover from __SsizeT
-
-
-
-
-IntptrT: cover from Int
-
 
 SDLMouseButtonEvent: cover from StructSDLMouseButtonEvent
 
-
-DaddrT: cover from __DaddrT
-
 SDLSysWMEvent: cover from StructSDLSysWMEvent
-
-
 
 SDLAudioSpec: cover from StructSDLAudioSpec
 
-
-
 SDLResizeEvent: cover from StructSDLResizeEvent
-
-UintmaxT: cover from ULLong
-
-
 
 SDLSem: cover
 
 SDLJoyAxisEvent: cover from StructSDLJoyAxisEvent
 
-UInt64T: cover from ULLong
-
-RegisterT: cover from Int
-
 SDLBlit: cover from Func
 
 SDLEvent: cover from UnionSDLEvent
 
-UInt16T: cover from UShort
-
-ModeT: cover from __ModeT
-
-
-UintFast8T: cover from UChar
-
 SDLRect: cover from StructSDLRect
 
-FposT: cover from _GFposT
-
-CookieSeekFunctionT: cover from __IoSeekFn
-
-UintLeast16T: cover from UShort
-
-PtrdiffT: cover from Int
-
-SDLTimerID: cover from Struct_SdlTimerID*
-
-IntLeast64T: cover from LLong
-
-PthreadKeyT: cover from UInt
-
-
+SDLTimerID: cover from SDL_TimerID
 
 SDLCursor: cover from StructSDLCursor
 
 SDLSurface: cover from StructSDLSurface
-
-PthreadOnceT: cover from Int
-
-CaddrT: cover from __caddr_t
-
-FdMask: cover from __FdMask
 
 SDLUserEvent: cover from StructSDLUserEvent
 
@@ -819,12 +715,7 @@ SDLKeyboardEvent: cover from StructSDLKeyboardEvent
 
 SDLSysWMmsg: cover
 
-
-
-
-
 SDLVideoInfo: cover from StructSDLVideoInfo
-
 
 StructSDLCond: cover
 
@@ -838,9 +729,9 @@ StructSDLMutex: cover
 
 StructSDLSemaphore: cover
 
-Struct_SdlTimerID: cover
-
 StructSDLSysWMmsg: cover
+
+IconvT: cover from Void* extends Pointer
 
 sdlLinkedVersion_: extern(SDL_Linked_Version) func -> const SDLVersion_*
 sdlGetAppState: extern(SDL_GetAppState) func -> UInt8
