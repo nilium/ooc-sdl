@@ -1,4 +1,4 @@
-include SDL
+use sdl
 
 StructSDLVersion_: cover from struct SDL_version {
     major: extern UInt8
@@ -832,7 +832,7 @@ sdlPumpEvents: extern(SDL_PumpEvents) func
 sdlGlGetAttribute: extern(SDL_GL_GetAttribute) func (attr: Int, value: Int*) -> Int
 sdlIconv: extern(SDL_iconv) func (cd: IconvT, inbuf: const Char**, inbytesleft: SizeT*, outbuf: Char**, outbytesleft: SizeT*) -> SizeT
 sdlGetKeyName: extern(SDL_GetKeyName) func (key: Int) -> Char*
-sdlSetVideoMode: extern(SDL_SetVideoMode) func (width: Int, height: Int, bpp: Int, flags: UInt32) -> SDLSurface*
+sdlSetVideoMode: extern(SDL_SetVideoMode) func (width: Int, height: Int, bpp: Int, flags: EnumSDLSurfaceFlags) -> SDLSurface*
 sdlGetVideoInfo: extern(SDL_GetVideoInfo) func -> const SDLVideoInfo*
 sdlDestroySemaphore: extern(SDL_DestroySemaphore) func (sem: SDLSem*)
 sdlStrrev: extern(SDL_strrev) func (string: Char*) -> Char*
