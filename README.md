@@ -14,5 +14,5 @@ Credits
 =======
 
 * Amos Wenger (nddrylliog) — Cleaned up the generated code, made this work, wrote the compiler, etc.
-* Friedrich Weber — generated the original code for the bindings using [babbisch](http://github.com/fredreichbier/babbisch).
+* Friedrich Weber (fredreichbier) — generated the original code for the bindings using [babbisch](http://github.com/fredreichbier/babbisch).
 * Noel Cower (Nilium) — Cleaned up generated code, wrote this README.
